@@ -1,6 +1,8 @@
 #about {
     position: relative;
-    height: 600px;
+    height: 41vw;
+    min-height: 480px;
+    max-height: 650px;
 
     & img {
         position: absolute;
@@ -59,6 +61,10 @@
 
 @media(max-width: $med) {
     #about {
+        height: auto;
+        min-height: fit-content;
+        margin-bottom: 100px;
+
         & img {
             display: none;
         }
