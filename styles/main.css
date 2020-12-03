@@ -92,7 +92,7 @@ header button:focus {
   outline: none;
 }
 
-header img {
+header picture img {
   position: absolute;
   max-width: 610px;
   width: 60vw;
@@ -101,13 +101,28 @@ header img {
   z-index: -1;
 }
 
+header .yellow {
+  left: 30px;
+  bottom: 0;
+}
+
+header .blue--large {
+  width: 120px;
+  left: 45%;
+}
+
+header .blue--small {
+  right: 20px;
+  bottom: 20px;
+}
+
 @media (max-width: 768px) {
   header {
     overflow-x: hidden;
     height: 115vw;
     padding: 100px 8.33%;
   }
-  header img {
+  header picture img {
     width: 120vw;
     max-width: none;
     top: -20px;
@@ -119,7 +134,7 @@ header img {
   header {
     padding: 140px 8.33%;
   }
-  header img {
+  header picture img {
     top: -50px;
   }
   header h1 {
@@ -364,5 +379,9 @@ header img {
 
 html {
   scroll-behavior: smooth;
+}
+
+.shape {
+  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */
