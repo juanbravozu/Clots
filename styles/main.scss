@@ -1,0 +1,15 @@
+@import './variables';
+@import './nav';
+@import './header';
+@import './about';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $dosis;
+}
+
+html {
+    scroll-behavior: smooth;
+}
