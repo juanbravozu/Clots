@@ -72,30 +72,10 @@ header p {
   font-size: 18px;
 }
 
-header button {
-  color: white;
-  width: 225px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: #392F5A;
-  border: none;
-  text-align: center;
-  font-weight: 600;
-  font-size: 21px;
-}
-
-header button:hover {
-  background-color: #2D2350;
-}
-
-header button:focus {
-  outline: none;
-}
-
 header picture img {
   position: absolute;
-  max-width: 610px;
-  width: 60vw;
+  max-width: 710px;
+  width: 50vw;
   right: 0;
   top: 0;
   z-index: -1;
@@ -119,7 +99,7 @@ header .blue--small {
 @media (max-width: 768px) {
   header {
     overflow-x: hidden;
-    height: 115vw;
+    height: 125vw;
     padding: 100px 8.33%;
   }
   header picture img {
@@ -127,6 +107,18 @@ header .blue--small {
     max-width: none;
     top: -20px;
     right: -20vw;
+  }
+  header .blue--large {
+    display: none;
+  }
+  header .yellow {
+    width: 45px;
+    left: 60%;
+  }
+  header .blue--small {
+    bottom: 10px;
+    right: auto;
+    left: 48%;
   }
 }
 
@@ -144,11 +136,6 @@ header .blue--small {
     max-width: 270px;
     font-size: 18px;
   }
-  header button {
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -157,11 +144,6 @@ header .blue--small {
   }
   header p {
     max-width: 270px;
-    font-size: 14px;
-  }
-  header button {
-    width: 140px;
-    height: 40px;
     font-size: 14px;
   }
 }
@@ -183,7 +165,7 @@ header .blue--small {
   z-index: -1;
 }
 
-#about div {
+#about .aboutUs {
   position: relative;
   left: 45%;
   top: 25%;
@@ -192,7 +174,7 @@ header .blue--small {
   color: #392F5A;
 }
 
-#about div .split_line {
+#about .aboutUs .split_line {
   position: absolute;
   width: 100px;
   height: 2px;
@@ -201,19 +183,19 @@ header .blue--small {
   top: 30px;
 }
 
-#about div h2 {
+#about .aboutUs h2 {
   font-weight: 600;
   font-size: 21px;
 }
 
-#about div h1 {
+#about .aboutUs h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 44px;
   margin: 20px 0;
 }
 
-#about div p {
+#about .aboutUs p {
   font-weight: 500;
   font-size: 18px;
   line-height: 32px;
@@ -227,7 +209,7 @@ header .blue--small {
 
 @media (max-width: 768px) {
   #about {
-    height: auto;
+    height: 320px;
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;
@@ -236,14 +218,26 @@ header .blue--small {
   #about img {
     display: none;
   }
-  #about div {
+  #about .aboutUs {
     left: auto;
-    top: auto;
+    top: 50%;
     width: 84%;
     margin: 0 8%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
-  #about div .split_line {
-    left: -8%;
+  #about .bg {
+    position: absolute;
+    width: 160px;
+    height: 380px;
+    background-color: #DCDCDC;
+    opacity: .4;
+    border-radius: 28px;
+    top: 50%;
+    left: -60px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: -1;
   }
 }
 
@@ -281,6 +275,21 @@ header .blue--small {
   color: white;
   font-weight: 700;
   font-size: 51px;
+}
+
+#information .title .yellow {
+  right: 70px;
+  top: -70px;
+}
+
+#information .title .blue--medium {
+  left: 30px;
+  top: 40px;
+}
+
+#information .title .blue--small {
+  right: 70px;
+  top: 10px;
 }
 
 #information .cards {
@@ -366,6 +375,225 @@ header .blue--small {
 @media (max-width: 576px) {
   #information .cards .card p {
     font-size: 14px;
+  }
+}
+
+button {
+  width: 225px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button--purple {
+  color: white;
+  background-color: #392F5A;
+}
+
+.button--purple:hover {
+  background-color: #2D2350;
+}
+
+.button--purple:focus {
+  outline: none;
+}
+
+.button--white {
+  color: #392F5A;
+  background-color: #F7F7F7;
+}
+
+.button--white:hover {
+  background-color: #EBEBEB;
+}
+
+.button--white:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  button {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+#banner {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  background-image: url("../assets/img_banner.png");
+  background-size: cover;
+  background-position: center left;
+  overflow-x: hidden;
+}
+
+#banner div {
+  position: relative;
+  left: 60%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#banner div p {
+  margin: 30px 0;
+  max-width: 380px;
+  font-size: 21px;
+  font-weight: 500;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  #banner {
+    height: 500px;
+    background-image: url("../assets/img_banner_small.png");
+    padding: 0 8.33%;
+  }
+  #banner div {
+    left: auto;
+    top: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  #banner {
+    height: 400px;
+  }
+  #banner div img {
+    width: 180px;
+  }
+  #banner div p {
+    font-size: 18px;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 200px;
+  padding: 30px 8.33%;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+}
+
+footer div .logo {
+  width: 120px;
+}
+
+footer div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer div ul li {
+  list-style: none;
+}
+
+footer div ul li a {
+  text-decoration: none;
+  color: #392F5A;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+footer div ul li a:hover {
+  font-weight: 600;
+}
+
+footer div .nav {
+  width: 45%;
+}
+
+footer div .social {
+  width: 20%;
+}
+
+footer .rights {
+  color: #392F5A;
+  font-size: 18px;
+  font-weight: 300;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 300px;
+  }
+  footer div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer div .social {
+    width: 50%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 30px 0;
+  }
+  footer div .nav {
+    width: 70%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media (max-width: 576px) {
+  footer div .social {
+    width: 70%;
+  }
+  footer div .nav {
+    width: 90%;
   }
 }
 

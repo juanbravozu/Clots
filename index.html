@@ -29,7 +29,7 @@
     <header>
         <h1>¿Te hace falta ropa?</h1>
         <p>Únete y disfruta de la tienda virtual en la que puedes probarte la ropa antes de pagarla</p>
-        <button>Ir a la Tienda</button>
+        <button class="button--purple">Ir a la Tienda</button>
         <picture>
             <source media="(max-width: 768px)" srcset="./assets/img_header_small.png">
             <source media="(min-width: 769px)" srcset="./assets/img_header_large.png">
@@ -42,7 +42,7 @@
     </header>
 
     <section id="about">
-        <div>
+        <div class="aboutUs">
             <h2>01. Acerca de</h2>
             <div class="split_line"></div>
             <h1>Revolucionamos la forma de comprar ropa por internet</h1>
@@ -51,12 +51,18 @@
             </p>
         </div>
 
+        <div class="bg"></div>
+
         <img src="./assets/img_about.png" alt="">
     </section>
 
     <section id="information">
         <div class="title">
             <h1>¿Cómo funciona?</h1>
+
+            <img src="./assets/shape_blue_medium.png" alt="" class="shape blue--medium">
+            <img src="./assets/shape_yellow_large.png" alt="" class="shape yellow">
+            <img src="./assets/shape_blue_small.png" alt="" class="shape blue--small">
         </div>
 
         <div class="cards">
@@ -76,5 +82,34 @@
             </div>
         </div>
     </section>
+
+    <section id="banner">
+        <div>
+            <img src="./assets/logo_white.png" alt="Clots">
+            <p>Únete a la comunidad que no teme comprar ropa por internet. <br> <b>Ingresa ahora.</b></p>
+            <button class="button--white">Ir a la Tienda</button>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div>
+            <img class="logo" src="./assets/logo.png" alt="Clots">
+
+            <ul class="nav">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#information">Cómo funciona</a></li>
+            </ul>
+    
+            <ul class="social">
+                <li><a href=""><img src="./assets/icon_email.png" alt="Email"></a></li>
+                <li><a href=""><img src="./assets/icon_fb.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/storeclots/" target="/_blank"><img src="./assets/icon_ig.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+        
+        <p class="rights">2020. Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>

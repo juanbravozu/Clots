@@ -16,6 +16,21 @@
             font-weight: $bold;
             font-size: $title;
         }
+
+        .yellow {
+            right: 70px;
+            top: -70px;
+        }
+
+        .blue--medium {
+            left: 30px;
+            top: 40px;
+        }
+
+        .blue--small {
+            right: 70px;
+            top: 10px;
+        }
     }
 
     & .cards {

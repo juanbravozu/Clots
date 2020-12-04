@@ -4,7 +4,7 @@
     min-height: 480px;
     max-height: 650px;
 
-    & img {
+    img {
         position: absolute;
         top: 0;
         left: 16%;
@@ -14,7 +14,7 @@
         z-index: -1;
     }
 
-    & div {
+    .aboutUs {
         position: relative;
         left: 45%;
         top: 25%;
@@ -22,7 +22,7 @@
         max-width: 500px;
         color: $purple;
 
-        & .split_line {
+        .split_line {
             position: absolute;
             width: 100px;
             height: 2px;
@@ -31,19 +31,19 @@
             top: 30px;
         }
 
-        & h2 {
+        h2 {
             font-weight: $semibold;
             font-size: $subtitle;
         }
 
-        & h1 {
+        h1 {
             font-weight: $bold;
             font-size: $titleMed;
             line-height: 44px;
             margin: 20px 0;
         }
 
-        & p {
+        p {
             font-weight: $medium;
             font-size: $body;
             line-height: 32px;
@@ -53,7 +53,7 @@
 
 @media(max-width: $large) and (min-width: $med) {
     #about {
-        & img {
+        img {
             left: 10%;
         }
     }
@@ -61,35 +61,45 @@
 
 @media(max-width: $med) {
     #about {
-        height: auto;
+        height: 320px;
         min-height: fit-content;
         margin-bottom: 100px;
 
-        & img {
+        img {
             display: none;
         }
 
-        & div {
+        .aboutUs {
             left: auto;
-            top: auto;
+            top: 50%;
             width: 84%;
             margin: 0 8%;
+            transform: translateY(-50%);
+        }
 
-            & .split_line {
-                left: -8%;
-            }
+        .bg {
+            position: absolute;
+            width: 160px;
+            height: 380px;
+            background-color: #DCDCDC;
+            opacity: .4;
+            border-radius: 28px;
+            top: 50%;
+            left: -60px;
+            transform: translateY(-50%);
+            z-index: -1;
         }
     }
 }
 
 @media(max-width: $small) {
     #about {
-        & div {
-            & h1 {
+        div {
+            h1 {
                 font-size: $titleMedMob;
             }
 
-            & p {
+            p {
                 font-size: $bodyMob;
             }
         }

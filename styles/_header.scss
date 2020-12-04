@@ -18,31 +18,10 @@ header {
         font-size: $body;
     }
 
-    button {
-        color: white;
-        width: 225px;
-        height: 60px;
-        border-radius: 30px;
-        background-color: $purple;
-        border: none;
-
-        text-align: center;
-        font-weight: $semibold;
-        font-size: $subtitle;
-
-        &:hover {
-            background-color: #2D2350;
-        }
-
-        &:focus {
-            outline: none;
-        }
-    }
-
     picture img {
         position: absolute;
-        max-width: 610px;
-        width: 60vw;
+        max-width: 710px;
+        width: 50vw;
         right: 0;
         top: 0;
         z-index: -1;
@@ -67,7 +46,7 @@ header {
 @media(max-width: $med) {
     header {
         overflow-x: hidden;
-        height: 115vw;
+        height: 125vw;
         padding: 100px 8.33%;
 
         picture img {
@@ -75,6 +54,21 @@ header {
             max-width: none;
             top: -20px;
             right: -20vw;
+        }
+
+        .blue--large {
+            display: none;
+        }
+
+        .yellow {
+            width: 45px;
+            left: 60%;
+        }
+        
+        .blue--small {
+            bottom: 10px;
+            right: auto;
+            left: 48%;
         }
     }
 }
@@ -95,12 +89,6 @@ header {
             max-width: 270px;
             font-size: $body;
         }
-
-        button {
-            width: 200px;
-            height: 50px;
-            font-size: $body;
-        }
     }
 }
 
@@ -112,12 +100,6 @@ header {
     
         p {
             max-width: 270px;
-            font-size: $bodyMob;
-        }
-    
-        button {
-            width: 140px;
-            height: 40px;
             font-size: $bodyMob;
         }
     }    

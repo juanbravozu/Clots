@@ -1,0 +1,57 @@
+button {
+    width: 225px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+
+    text-align: center;
+    font-weight: $semibold;
+    font-size: $subtitle;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button--purple {
+    color: white;
+    background-color: $purple;
+
+    &:hover {
+        background-color: #2D2350;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button--white {
+    color: $purple;
+    background-color: #F7F7F7;
+
+    &:hover {
+        background-color: #EBEBEB;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media(max-width: $med) and (min-width: $small) {
+    button {
+        width: 200px;
+        height: 50px;
+        font-size: $body;
+    }    
+}
+
+@media(max-width: $small) {
+    button {
+        width: 140px;
+        height: 40px;
+        font-size: $bodyMob;
+    }
+}
