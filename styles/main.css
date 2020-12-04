@@ -45,6 +45,19 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
+.nav--error {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav--error ul {
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -590,6 +603,52 @@ footer .rights {
   footer div .nav {
     width: 90%;
   }
+}
+
+.errorSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: calc(100vh - 200px);
+  padding: 0 18%;
+  padding-top: 100px;
+}
+
+.error {
+  position: relative;
+  padding-left: 100px;
+}
+
+.error h1 {
+  color: #392F5A;
+  font-weight: 700;
+  font-size: 70px;
+  margin: 0;
+}
+
+.error p {
+  color: #392F5A;
+  font-weight: 500;
+  font-size: 21px;
+  margin: 20px 0;
+}
+
+.error .shape {
+  width: 200px;
+  height: 380px;
+  background-color: #DCDCDC;
+  opacity: .4;
+  border-radius: 28px;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 * {

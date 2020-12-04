@@ -7,21 +7,21 @@ nav {
     z-index: 5;
     padding: 30px 8.33%;
 
-    & img {
+    img {
         width: 100px;
     }
 
-    & ul {
+    ul {
         display: flex;
         width: 70%;
         max-width: 900px;
         flex-wrap: nowrap;
         justify-content: space-evenly;
 
-        & li {
+        li {
             list-style: none;
 
-            & a {
+            a {
                 text-decoration: none;
                 color: $purple;
                 font-size: $subtitle;
@@ -33,6 +33,17 @@ nav {
                 }
             }            
         }
+    }
+
+    
+}
+
+.nav--error {
+    justify-content: space-between;
+
+    ul {
+        width: 50%;
+        justify-content: space-between;
     }
 }
 

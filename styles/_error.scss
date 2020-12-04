@@ -1,0 +1,39 @@
+.errorSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 200px);
+    padding: 0 18%;
+    padding-top: 100px;    
+}
+
+.error {
+    position: relative;
+    padding-left: 100px;
+
+    h1 {
+        color: $purple;
+        font-weight: $bold;
+        font-size: 70px;
+        margin: 0;
+    }
+    
+    p {
+        color: $purple;
+        font-weight: $medium;
+        font-size: $subtitle;
+        margin: 20px 0;
+    }
+
+    .shape {
+        width: 200px;
+        height: 380px;
+        background-color: #DCDCDC;
+        opacity: .4;
+        border-radius: 28px;
+        z-index: -1;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
