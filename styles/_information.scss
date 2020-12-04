@@ -46,7 +46,7 @@
             flex-direction: column;
             align-items: center;
             width: 30%;
-            height: 250px;
+            height: 300px;
             padding: 50px 0;
             background-color: white;
             border-radius: 20px;
@@ -60,12 +60,9 @@
             & p {
                 font-weight: $medium;
                 font-size: $body;
+                max-width: 220px;
                 text-align: center;
                 color: $purple;
-            }
-
-            &--center {
-                height: 350px;
             }
         }
     }
@@ -93,22 +90,6 @@
                 width: 100%;
                 max-width: 450px;
                 margin: 20px 8.33%;
-
-                &--center {
-                    height: 250px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: $small) {
-    #information {
-        .cards {
-            .card {
-                p {
-                    font-size: $bodyMob;
-                }
             }
         }
     }

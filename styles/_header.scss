@@ -94,13 +94,19 @@ header {
 
 @media(max-width: $small) {
     header {
+        height: 135vw;
+
         h1 {
             font-size: $titleMob;
         }
-    
+
         p {
-            max-width: 270px;
-            font-size: $bodyMob;
+            max-width: 248px;
+        }
+
+        picture img {
+            width: 135vw;
+            right: -35vw;
         }
     }    
 }

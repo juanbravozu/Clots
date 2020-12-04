@@ -139,12 +139,18 @@ header .blue--small {
 }
 
 @media (max-width: 576px) {
+  header {
+    height: 135vw;
+  }
   header h1 {
     font-size: 32px;
   }
   header p {
-    max-width: 270px;
-    font-size: 14px;
+    max-width: 248px;
+  }
+  header picture img {
+    width: 135vw;
+    right: -35vw;
   }
 }
 
@@ -317,7 +323,7 @@ header .blue--small {
       -ms-flex-align: center;
           align-items: center;
   width: 30%;
-  height: 250px;
+  height: 300px;
   padding: 50px 0;
   background-color: white;
   border-radius: 20px;
@@ -333,12 +339,9 @@ header .blue--small {
 #information .cards .card p {
   font-weight: 500;
   font-size: 18px;
+  max-width: 220px;
   text-align: center;
   color: #392F5A;
-}
-
-#information .cards .card--center {
-  height: 350px;
 }
 
 @media (max-width: 768px) {
@@ -366,15 +369,6 @@ header .blue--small {
     width: 100%;
     max-width: 450px;
     margin: 20px 8.33%;
-  }
-  #information .cards .card--center {
-    height: 250px;
-  }
-}
-
-@media (max-width: 576px) {
-  #information .cards .card p {
-    font-size: 14px;
   }
 }
 
@@ -443,6 +437,7 @@ button:focus {
   background-size: cover;
   background-position: center left;
   overflow-x: hidden;
+  margin-top: 40px;
 }
 
 #banner div {
