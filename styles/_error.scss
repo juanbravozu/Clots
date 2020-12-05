@@ -37,3 +37,45 @@
         transform: translateY(-50%);
     }
 }
+
+@media(max-width: $med) {
+
+    .errorSection {
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            max-width: 250px;
+        }
+
+    }
+
+    .error {
+        padding: 0;
+
+        .shape {
+            display: none;
+        }
+
+        h1 {
+            font-size: $title;
+        }
+
+        p {
+            font-size: $body;
+        }
+    }
+}
+
+@media(max-width: $small) {
+    .errorSection {
+        padding: 0 8.33%;
+        padding-top: 100px;
+    }
+
+    .error {
+        h1 {
+            font-size: $titleMob;
+        }
+    }
+}

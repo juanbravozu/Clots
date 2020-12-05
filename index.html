@@ -29,7 +29,7 @@
     <header>
         <h1>¿Te hace falta ropa?</h1>
         <p>Únete y disfruta de la tienda virtual en la que puedes probarte la ropa antes de pagarla</p>
-        <button class="button--purple">Ir a la Tienda</button>
+        <button class="button--purple modalBtn">Ir a la Tienda</button>
         <picture>
             <source media="(max-width: 768px)" srcset="./assets/img_header_small.png">
             <source media="(min-width: 769px)" srcset="./assets/img_header_large.png">
@@ -90,7 +90,7 @@
         <div>
             <img src="./assets/logo_white.png" alt="Clots">
             <p>Únete a la comunidad que no teme comprar ropa por internet. <br> <b>Ingresa ahora.</b></p>
-            <button class="button--white">Ir a la Tienda</button>
+            <button class="button--white modalBtn">Ir a la Tienda</button>
         </div>
         
     </section>
@@ -115,8 +115,28 @@
         <p class="rights">2020. Todos los derechos reservados</p>
     </footer>
 
+    <div class="modal modal--inactive">
+        <div>
+            <h1>Compra con Clots</h1>
+            <p>Ingresa los datos de tu ciudad y te indicaremos la tienda más cercana.</p>
+
+            <label for="state">Departamento</label>
+            <select name="state" id="state">
+                <option value="">Selecciona un Departamento</option>
+            </select>
+
+            <label for="city">Ciudad</label>
+            <select name="city" id="city" disabled>
+                <option value="">Selecciona una ciudad</option>
+            </select>
+
+            <button class="button--purple" disabled>Ir a la Tienda</button>
+        </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="./scripts/modal.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,71 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .4);
+
+    div {
+        position: relative;
+        width: 500px;
+        height: 80%;
+        background-color: white;
+        border-radius: 30px;
+        padding: 60px;
+
+        h1 {
+            font-weight: $bold;
+            font-size: $titleMed;
+            color: $purple;
+        }
+
+        p {
+            font-weight: $medium;
+            font-size: $body;
+            color: $purple;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+            color: $purple;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            font-size: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #EBEBEB;
+            border: none;
+            color: $purple;
+        }
+
+        button {
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            bottom: 60px;
+            left: calc(50% - 10px);
+            transform: translateX(-50%);
+
+            &:disabled {
+                background-color: #EBEBEB;
+                
+            }
+        }
+    }
+
+    &--inactive {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
