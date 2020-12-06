@@ -13,6 +13,7 @@
         position: relative;
         width: 500px;
         height: 80%;
+        min-height: 480px;
         background-color: white;
         border-radius: 30px;
         padding: 60px;
@@ -62,10 +63,38 @@
                 
             }
         }
+
+        img {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            opacity: .3;
+            transition: opacity .2s ease-out;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 
     &--inactive {
         opacity: 0;
         pointer-events: none;
+    }
+}
+
+@media(max-width: $small) {
+    .modal {
+        padding: 0 8.33%;
+
+        div {
+            width: 100%;
+            padding: 60px 8.33%;
+
+            h1 {
+                font-size: $titleMedMob;
+            }
+        }
     }
 }
