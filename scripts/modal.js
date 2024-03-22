@@ -1,3 +1,5 @@
+let analytics;
+
 window.addEventListener('load', () => {
 
     var firebaseConfig = {
@@ -11,7 +13,8 @@ window.addEventListener('load', () => {
     };
       // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    let db = firebase.firestore();
+    const db = firebase.firestore();
+    analytics = firebase.analytics();
 
     const modal = document.querySelector('.modal div');
     const state = document.getElementById('state');
