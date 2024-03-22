@@ -1,3 +1,6 @@
+import { logEvent } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+import { analytics } from "./modal.js";
+
 window.addEventListener('load', () => {
 
     const openModal = () => {
@@ -6,7 +9,7 @@ window.addEventListener('load', () => {
     }
 
     const registerLead = () => {
-      analytics.logEvent('generate_lead')
+      logEvent(analytics, 'generate_lead');
     }
 
     const openModalBtns = document.querySelectorAll('.modalBtn');

@@ -1,4 +1,7 @@
-let analytics;
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getFirestore, addDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+export let analytics;
 
 window.addEventListener('load', () => {
 
@@ -12,9 +15,9 @@ window.addEventListener('load', () => {
         measurementId: "G-R8HFD50P5V"
     };
       // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    analytics = firebase.analytics();
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    analytics = getAnalytics(app);
 
     const modal = document.querySelector('.modal div');
     const state = document.getElementById('state');
@@ -62,7 +65,8 @@ window.addEventListener('load', () => {
         if(state.value && city.value) {
             userInfo.departamento = state.value;
             userInfo.ciudad = city.value;
-            db.collection('respuestas').add(userInfo);
+            //db.collection('respuestas').add(userInfo);
+            addDoc(db, userInfo);
             window.location.href = './tienda.html';
         }        
     });
